@@ -39,20 +39,15 @@ async function openDiscordLootbox() {
         return;
     }
 
+    const build_number = {
+        'client_build_number': 280686
+    };
+
     const response = await fetch('https://discord.com/api/v9/users/@me/lootboxes/open', {
         method: 'POST',
         headers: {
-            'accept': '*/*',
-            'accept-language': 'en-US',
             'authorization': discordToken,
-            'sec-ch-ua': '"Not_A Brand";v="8", "Chromium";v="120"',
-            'sec-ch-ua-mobile': '?0',
-            'sec-ch-ua-platform': '"Windows"',
-            'sec-fetch-dest': 'empty',
-            'sec-fetch-mode': 'cors',
-            'sec-fetch-site': 'same-origin',
-            'x-discord-locale': 'en-US',
-            'x-super-properties': 'eyJvcyI6IldpbmRvd3MiLCJicm93c2VyIjoiRGlzY29yZCBDbGllbnQiLCJyZWxlYXNlX2NoYW5uZWwiOiJzdGFibGUiLCJjbGllbnRfdmVyc2lvbiI6IjEuMC45MDM4Iiwib3NfdmVyc2lvbiI6IjEwLjAuMjI2MzEiLCJvc19hcmNoIjoieDY0IiwiYXBwX2FyY2giOiJpYTMyIiwic3lzdGVtX2xvY2FsZSI6ImVuLVVTIiwiYnJvd3Nlcl91c2VyX2FnZW50IjoiTW96aWxsYS81LjAgKFdpbmRvd3MgTlQgMTAuMDsgV09XNjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIGRpc2NvcmQvMS4wLjkwMzggQ2hyb21lLzEyMC4wLjYwOTkuMjkxIEVsZWN0cm9uLzI4LjIuNyBTYWZhcmkvNTM3LjM2IiwiYnJvd3Nlcl92ZXJzaW9uIjoiMjguMi43IiwiY2xpZW50X2J1aWxkX251bWJlciI6MjgwNjg2LCJuYXRpdmVfYnVpbGRfbnVtYmVyIjo0NTUyNCwiY2xpZW50X2V2ZW50X3NvdXJjZSI6bnVsbH0='
+            'x-super-properties': Buffer.from(JSON.stringify(build_number)).toString('base64'),
         },
         body: null,
     });
