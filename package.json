@@ -1,0 +1,26 @@
+{
+  "name": "discord-loot-box-opener",
+  "version": "1.0.0",
+  "description": "Automatically open discord loot boxes through API requests",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsx src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RadNotRed/discord-loot-box-opener.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RadNotRed/discord-loot-box-opener/issues"
+  },
+  "homepage": "https://github.com/RadNotRed/discord-loot-box-opener#readme",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.2"
+  }
+}
