@@ -9,8 +9,8 @@ This is a simple script that will automatically open lootboxes in Discord.
 3. Install dependencies: `npm install`
 4. Set up environment variables:
     - Rename .env.example to .env
-    - Add your environment variables like TOKEN=YOUR_DISCORD_TOKEN
+    - Add your environment variables like DISCORD_TOKEN=YOUR_DISCORD_TOKEN
 5. Run the script: `npm run start`
 
 # 🚀 Environment variables
-- `TOKEN` - Your Discord token
+- `DISCORD_TOKEN` - Your Discord token
